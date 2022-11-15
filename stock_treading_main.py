@@ -4,15 +4,15 @@ from twilio.rest import Client
 STOCK_NAME = "TSLA"
 COMPANY_NAME = "Tesla Inc"
 
-ACCOUNT_SID = "ACa28cefa0f6a1f368f47dc93e279c22c1"
-AUTH_TOKEN = "4bd2624c06975cd4e66f6bd6e8693777"
-TWILIO_NUMBER = "+16693221450"
-TARGET_NUMBER = "+919644295555"
+ACCOUNT_SID = "XXXXXXXXXXXXXXXXXXXXXX"
+AUTH_TOKEN = "XXXXXXXXXXXXXXXXX"
+TWILIO_NUMBER = "+XXXXXXXXXX"
+TARGET_NUMBER = "+91XXXXXXXXXX"
 
 STOCK_ENDPOINT = "https://www.alphavantage.co/query"
 NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
-API_KEY_STOCK = "EI2P120CWPXBG01H" #Alpha Vantage (api key of stock treding market)
-API_KEY_NEWS = "5fb34aa0e68343db84a80ab5d192a3f1"
+API_KEY_STOCK = "XXXXXXXXXXXXX" #Alpha Vantage (api key of stock treding market)
+API_KEY_NEWS = "XXXXXXXXXXXXXXXXXX"
 
 # STEP 1: Use https://www.alphavantage.co/documentation/#daily
 # When stock price increase/decreases by 5% between yesterday and the day before yesterday then print("Get News").
@@ -80,7 +80,7 @@ for article in formatted_article:
     message = client.messages \
                         .create(
                             body=f"\n{article}",
-                            from_='+16693221450',
+                            from_='+XXXXXXXXX',
                             to= TARGET_NUMBER
                             )
     print(message.status)
